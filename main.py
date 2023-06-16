@@ -22,21 +22,33 @@ from asociation import *
 #                           SETTING PARAMETERS BY THE USER
 #-----------------------------------------------------------------------------------------------
 
-N_ex = 1000                                                 # Number of Spins of each p-bit
-T = 20/1000                                                 # Temperature, K
-save = 0                                                    # 1: for saving results; 0: no
-starting_mode = 0.5                                         # Starting mode for all the spins (0.5 = 50% spins in the lower state of energy)
-B_max = 0.00025                                             # Maximum value for Magnetic Field, Tesla. If only option = 1
-cycles = 4                                                  # Changeable field applied. If only option = 1 
-time_steps = 2000                                           # Total time steps
-option = 1                                                  # 1: changeable field; 0: constant field 
-option_2spin = 0                                            # 1: yes; 0: no for the study of a p-bit network
-B_pbit2 = 0.02                                              # Applied magnetic field, Tesla. If only option_2spin = 1
-B_constant = 0                                              # Applied magnetic field, Tesla. If only option = 0
-factor = 100                                                # Threshold for the definition of the collective state of each p-bit. If only option_2spin = 1
-asociation_factor = time_steps                              # How many delays the program will take into account
-step_asociation_factor = 1                                  # How many steps of delay the program will take into account to reach the value of the previous variable
-flag = 28                                                   # System to be studied
+# GENERAL CONFIGURATIONS:
+#-------------------------------------
+N_ex = 1000                             # Number of Spins of each p-bit
+T = 20/1000                             # Temperature, K
+save = 0                                # 1: for saving results; 0: no
+flag = 28                               # System to be studied from SIMDAVIS database
+starting_mode = 0.5                     # Starting mode for all the spins (0.5 = 50% spins in the lower state of energy)
+time_steps = 2000                       # Total time steps
+option = 1                              # 1: changeable field; 0: constant field 
+option_2spin = 0                        # 1: yes; 0: no for the study of a p-bit network
+
+# CONSTANT MAGNETIC FIELD:
+#-------------------------------------
+B_constant = 0                          # Applied magnetic field, Tesla. If only "option" = 0
+
+# CHANGEABLE MAGNETIC FIELD:
+#-------------------------------------
+B_max = 0.00025                         # Maximum value for Magnetic Field, Tesla. If only "option" = 1
+cycles = 4                              # Changeable field applied. If only "option" = 1 
+
+# TWO P-BIT NETWORK:
+#-------------------------------------
+B_pbit2 = 0.02                          # Applied magnetic field, Tesla. If only "option_2spin" = 1
+B_constant = 0                          # Applied magnetic field, Tesla. If only "option" = 0
+factor = 100                            # Threshold for the definition of the collective state of each p-bit. If only "option_2spin" = 1
+asociation_factor = time_steps          # How many delays the program will take into account
+step_asociation_factor = 1              # How many steps of delay the program will take into account to reach the value of the previous variable
 
 #-----------------------------------------------------------
 
